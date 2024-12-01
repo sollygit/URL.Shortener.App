@@ -5,5 +5,5 @@ import { environment } from '../environments/environment';
 export class ConfigurationService {
   public appVersion = environment.appVersion;
   public appTitle = 'URL Shortener App';
-  public restUrl = environment.restUrl;
+  public get getAllUrl() { return `${environment.restUrl}/api/urlshortener`; }
 }

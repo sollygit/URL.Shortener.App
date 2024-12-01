@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ConfigurationService } from '../services/configuration.service';
+import { ShortenedUrl } from '../types/shortened-url.type';
 
 @Component({
   selector: 'app-root',
@@ -11,8 +12,9 @@ import { ConfigurationService } from '../services/configuration.service';
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  title: string;
-  appVersion: string;
+  public title: string;
+  public appVersion: string;
+  public items: ShortenedUrl[] = [];
 
   constructor(private configService: ConfigurationService) {
     this.title = this.configService.appTitle;
@@ -20,6 +22,6 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.configService.restUrl);
+    console.log(this.configService.getAllUrl);
   }
 }
