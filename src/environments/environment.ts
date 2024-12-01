@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  appVersion: '1.0.2',
+  appVersion: '1.0.1',
   restUrl: 'https://localhost:44391'
 };
 
