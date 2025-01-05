@@ -2,12 +2,11 @@ const { writeFile, existsSync, mkdirSync } = require('fs');
 const { promisify } = require('util');
 const path = require('path');
 const dotenv = require('dotenv');
-
-dotenv.config();
-
+const envFile = process.env['NODE_ENV'] === 'production' ? 'production.env' : '.env';
+const targetPath = './src/environments/environment.ts';
 const writeFilePromisified = promisify(writeFile);
 
-const targetPath = './src/environments/environment.ts';
+dotenv.config({ path: envFile });
 
 const envConfigFile = `export const environment = {
   production: ${process.env['PRODUCTION']},
