@@ -19,6 +19,7 @@ export class ProtectedComponent implements OnInit {
       const { data, error } = response;
       if (data) {
         this.items = data as ShortenedUrlModel[];
+        this.items.map(m => m.code = m.code.toUpperCase());
       }
 
       if (error) {
