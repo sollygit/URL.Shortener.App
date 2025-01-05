@@ -1,4 +1,6 @@
-# Angular/TypeScript: Starter SPA Code Sample
+### https://url-shortener-app.azurewebsites.net
+
+# This is a sample application that demonstrates the authentication flow for Angular apps using Auth0.
 
 This TypeScript code sample demonstrates how to build a Single-Page Application (SPA) using Angular. This Angular code sample builds the API server using Angular class components.
 
